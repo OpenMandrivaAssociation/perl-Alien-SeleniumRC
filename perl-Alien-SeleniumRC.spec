@@ -1,19 +1,19 @@
 %define upstream_name    Alien-SeleniumRC
 %define upstream_version 1.03
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	3
 
-Summary:    Packaging up SeleniumRC java server
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Alien/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Packaging up SeleniumRC java server
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Alien/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(Test::More)
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
+BuildRequires:	perl(Test::More)
+BuildArch:	noarch
 
 %description
 The Selenium RC home page is at the http://openqa.org/selenium-rc manpage
@@ -30,24 +30,29 @@ a pure-HTML+JS library that performs automated tasks in JavaScript.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+perl Makefile.PL INSTALLDIRS=vendor
+%make
 
 %check
-%{make} test
+%make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{_mandir}/man3/*
-%perl_vendorlib/*
-/usr/bin/selenium-rc
+%{perl_vendorlib}/*
+%{_bindir}/selenium-rc
+
+
+
+%changelog
+* Sun Apr 17 2011 Funda Wang <fwang@mandriva.org> 1.30.0-2mdv2011.0
++ Revision: 654203
+- rebuild for updated spec-helper
+
+* Fri Dec 24 2010 Shlomi Fish <shlomif@mandriva.org> 1.30.0-1mdv2011.0
++ Revision: 624660
+- import perl-Alien-SeleniumRC
 
