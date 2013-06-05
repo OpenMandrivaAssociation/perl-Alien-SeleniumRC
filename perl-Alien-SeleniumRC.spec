@@ -2,14 +2,14 @@
 %define upstream_version 1.03
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%perl_convert_version 2.93
+Release:	1
 
 Summary:	Packaging up SeleniumRC java server
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Alien/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Alien/Alien-SeleniumRC-2.93.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Test::More)
@@ -55,4 +55,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Fri Dec 24 2010 Shlomi Fish <shlomif@mandriva.org> 1.30.0-1mdv2011.0
 + Revision: 624660
 - import perl-Alien-SeleniumRC
+
 
