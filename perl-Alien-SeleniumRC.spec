@@ -2,7 +2,7 @@
 %define upstream_version 2.93
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 2.93
-Release:	2
+Release:	3
 
 Summary:	Packaging up SeleniumRC java server
 License:	GPL+ or Artistic
