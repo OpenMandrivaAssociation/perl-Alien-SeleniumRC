@@ -7,7 +7,7 @@ Release:	3
 Summary:	Packaging up SeleniumRC java server
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Alien/Alien-SeleniumRC-2.93.tar.gz
 
 BuildRequires:	perl-devel
