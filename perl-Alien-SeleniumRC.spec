@@ -1,14 +1,14 @@
 %define upstream_name    Alien-SeleniumRC
-%define upstream_version 2.93
+%define upstream_version 3.7
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 2.93
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Packaging up SeleniumRC java server
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Alien/Alien-SeleniumRC-2.93.tar.gz
+Url:		https://metacpan.org/dist/Alien-SeleniumRC
+Source0:	https://cpan.metacpan.org/authors/id/H/HI/HISSO/Alien-SeleniumRC-3.7.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
