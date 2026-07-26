@@ -1,8 +1,7 @@
 %define upstream_name    Alien-SeleniumRC
-%define upstream_version 3.7
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	3.7
+Release:	2
 
 Summary:	Packaging up SeleniumRC java server
 License:	GPL+ or Artistic
@@ -27,7 +26,7 @@ start/stop/control any supported browser. It works by using Selenium Core,
 a pure-HTML+JS library that performs automated tasks in JavaScript.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
